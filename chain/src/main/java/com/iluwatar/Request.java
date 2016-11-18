@@ -2,32 +2,22 @@ package com.iluwatar;
 
 public class Request {
 
-	private String requestDescription;
-	private RequestType requestType;
+    private RequestType requestType;
 
-	public Request(RequestType requestType, String requestDescription) {
-		this.setRequestType(requestType);
-		this.setRequestDescription(requestDescription);
-	}
+    public Request(RequestType requestType) {
+        this.setRequestType(requestType);
+    }
 
-	public String getRequestDescription() {
-		return requestDescription;
-	}
+    public RequestType getRequestType() {
+        return requestType;
+    }
 
-	public void setRequestDescription(String requestDescription) {
-		this.requestDescription = requestDescription;
-	}
+    public void setRequestType(RequestType requestType) {
+        this.requestType = requestType;
+    }
 
-	public RequestType getRequestType() {
-		return requestType;
-	}
-
-	public void setRequestType(RequestType requestType) {
-		this.requestType = requestType;
-	}
-
-	@Override
-	public String toString() {
-		return getRequestDescription();
-	}
+    @Override
+    public String toString() {
+        return requestType.toString();
+    }
 }
